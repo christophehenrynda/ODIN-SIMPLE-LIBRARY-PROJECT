@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your-Personal-Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <p>Library</p>
+        </div>
+        <div class="add-book">
+            <button>Add </button>
+            <img src="./icons/plus.svg" alt="plus-sign">
+        </div>
+    </nav>
+    <main >
+        <div class="books-container">
+            <div class="books-header">
+                <p> Your Books</p>
+            </div>
+            <div class="books">
+                
+            </div>
+        </div>
+        
+    </main>
+    <div class="add-pop-up hidden">
+        <form action="">
+            <div class="close">
+                <img src="./icons/close.svg" alt="">
+            </div>
+            <div>
+                <label for="title">TITLE</label>
+                <input type="text" class=" input" id="title">
+            </div>
+            <div>
+                <label for="author">AUTHOR</label>
+                <input type="text" class=" input" id="author">
+            </div>
+            <div>
+                <label for="nbr-of-page">NUMBER OF PAGES</label>
+                <input type="number" class="input" id="nbr-of-page">
+            </div>
+            <span>
+                <input type="checkbox" name="read" class="input" id="read">
+                <label for="read">READ</label>       
+            </span>
+            <div>
+                <button class="add-btn">Upload</button>
+            </div>
+            
+            
+        </form>
+    </div>
+</body>
+<script src="script2.js"></script>
+</html>

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg-color: #1c1c1c;
+    --text-weight-bold: 600;
+    --text-color: white;
+    --text-color-cards: black;
+    --border-color: #ddd;
+    --border-radius: 10px;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html, body{
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 20px;
+}
+main{
+    height: auto;
+    width: 100%;
+    
+}
+.main {
+    filter: blur(10px);
+}
+/*Nav bar*/
+nav {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    
+}
+
+.logo p {
+    font-weight: var(--text-weight-bold);
+    color: var(--text-color);
+    font-size: 2em;
+}
+
+.add-book {
+    border: 2px var(--border-color) solid;
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+
+    button {
+        background-color: var(--bg-color);
+        border: none;
+        border-radius: var(--border-radius);
+        color: var(--text-color);
+        display: flex;
+        font-size: 1.4em;
+        
+    }
+    img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+}
+
+/*Books List*/
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.books-header p{
+    color: var(--text-color);
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 300;
+}
+
+.book {
+    background-color: #FFE0B5;
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    padding: 15px;
+
+    .title-author {
+        .title {
+            font-weight: var(--text-weight-bold);
+        }
+        .author {
+            opacity: 0.5;
+        }
+    }
+
+    .nbr-of-pages-btns {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        align-items: center;
+
+        .book-btns {
+            display: flex;
+            gap: 5px;
+
+            
+        }
+    }
+
+}
+
+.delete {
+    background-color: #BA7BA1;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: var(--border-radius);
+}
+
+.read {
+    background-color: #768948;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: var(--border-radius);
+}
+.unread {
+    background-color: #D5573B;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: var(--border-radius);
+}
+
+/*add pop-up*/
+.add-pop-up {
+    color: var(--text-color);
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    background-color: #736F4E;
+    padding: 10px;
+    z-index: 100;
+    border-radius: 50px 0 30px 30px;
+    
+}
+
+.hidden{
+    display:none;
+}
+
+.add-pop-up>form>div {
+    display: flex;
+    flex-direction: column;  
+} 
+
+.input {
+    border-radius: var(--border-radius);
+    border: none;
+    padding: 5px;
+    padding: 5px 0 10px 0;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.add-btn {
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    border: none;
+    
+    background-color: #94AB5F;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    justify-self: end;
+}
